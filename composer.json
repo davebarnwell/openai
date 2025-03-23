@@ -1,0 +1,29 @@
+{
+    "name": "davebarnwell/openai-client",
+    "description": "A PHP client for OpenAI APIs",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dave Barnwell",
+            "email": "dave@d4b.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+      "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "D4B7\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable"
+}
