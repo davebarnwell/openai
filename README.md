@@ -1,8 +1,9 @@
 # OpenAI PHP client
 
-A Fluent PHP client fo4 the OpenAI chat completions API.
+A Fluent PHP client for the OpenAI chat completions API.
 
-Very much version 0.1 right now.
+Very much version 0.1 right now. Intent to to expand overtime, help appreciated,
+inspired by various Javascript/Typescipt OpenAPI clients.
 
 # Usage
 
