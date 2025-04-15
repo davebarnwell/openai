@@ -51,9 +51,30 @@ class ApiClient
         return $this->withMessage('user', $message);
     }
 
+    /**
+     * Developer-provided instructions that the model should follow, regardless of messages sent by the user.
+     * With o1 models and newer, use developer messages for this purpose instead.
+     *
+     * @param  string  $message
+     *
+     * @return self
+     */
     public function withSystemPrompt(string $message): self
     {
         return $this->withMessage('system', $message);
+    }
+
+    /**
+     * Developer-provided instructions that the model should follow, regardless of messages sent by the user.
+     * With o1 models and newer, developer messages replace the previous system messages.
+     *
+     * @param  string  $message
+     *
+     * @return self
+     */
+    public function withDeveloperPrompt(string $message): self
+    {
+        return $this->withMessage('developer', $message);
     }
 
 
