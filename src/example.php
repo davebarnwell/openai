@@ -24,9 +24,10 @@ $openAIClient = new ApiClient(
 $response = $openAIClient->using($_ENV['OPENAI_API_MODEL'])
                          ->withTemperature((float) $_ENV['OPENAI_API_TEMPERATURE'])
 //                         ->withSystemPrompt('Acting as a comedian') // pre o1 models
-                         ->withDeveloperPrompt('Acting as a comedian') // o1 models on system was replaced with developer msgs
+                         ->withDeveloperPrompt('Acting as a comedian') // o1 models on, system role prompts were replaced with developer role prompts
                          ->withUserPrompt('Tell me a knock knock joke')
                          ->withUserPrompt('Actually tell me two such jokes')
+                         ->withAssistantPrompt('Are you ready? Here they come ready or not')
                          ->execute();
 
 // var_dump($response);

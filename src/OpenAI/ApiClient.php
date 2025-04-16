@@ -51,6 +51,11 @@ class ApiClient
         return $this->withMessage('user', $message);
     }
 
+    public function withAssistantPrompt(string $message): self
+    {
+        return $this->withMessage('assistant', $message);
+    }
+
     /**
      * Developer-provided instructions that the model should follow, regardless of messages sent by the user.
      * With o1 models and newer, use developer messages for this purpose instead.
